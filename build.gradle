@@ -66,3 +66,10 @@ tasks.register("codeCoverageReport", JacocoReport) {
         html.outputLocation = layout.buildDirectory.dir('jacocoHtml')
     }
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+    }
+}
+test.finalizedBy jacocoTestReport
